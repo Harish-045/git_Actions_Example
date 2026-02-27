@@ -1,4 +1,4 @@
-name: Node CI
+name: Simple CI
 
 on:
   push:
@@ -13,16 +13,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Show Files (Debug)
+      - name: Show Files
         run: ls -la
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run App
-        run: node index.js
+      - name: Print Message
+        run: echo "Hello Harish, GitHub Actions is working!"
